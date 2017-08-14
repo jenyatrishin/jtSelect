@@ -15,11 +15,11 @@ import jtSelect from 'jtSelect.js';
 ## Using
 
 ```js
-let selectElement = document.querySelector('select');
+const selectElement = document.querySelector('select');
 new jtSelect(selectElement, options);
 ```
 options
-searchField - true|false
-onStateChange - function - callback for change event
-placeholder - string - placeholder for element.
+searchField - true|false,
+onStateChange - function - callback for change event,
+placeholder - string - placeholder for element. 
 Placeholder can set via data html5 attribute data-placeholder=""
