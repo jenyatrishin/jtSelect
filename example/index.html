@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jtSelect example</title>
+    <link href="css/base.css" type="text/css" rel="stylesheet">
+    <link href="../dist/css/_jtSelect.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+<div class="select-box" >
+    <h1>Single select</h1>
+    <select name="single-select" class="select">
+        <option value="1">First</option>
+        <option value="2">Second</option>
+    </select>
+</div>
+
+<div class="select-box" >
+    <h1>Single select with placeholder</h1>
+    <select name="single-select" data-placeholder="Placeholder example" class="select">
+        <option value="1">First</option>
+        <option value="2">Second</option>
+    </select>
+</div>
+
+<div class="select-box">
+<h1>Multiple select</h1>
+    <select name="multi-select" multiple class="select">
+        <option value="1" selected>First</option>
+        <option value="2">Second</option>
+		<option value="3">3</option>
+		<option value="4">4</option>
+    </select>
+	</div>
+
+<div class="select-box" >
+    <h1>Single select with callback and without search field</h1>
+    <select name="single-select" data-placeholder="Placeholder example" class="select-callback">
+        <option value="1">First</option>
+        <option value="2">Second</option>
+    </select>
+</div>
+
+<script type="text/javascript" src="../dist/js/jtSelect.js"></script>
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', function(){
+	   window.jtSelect = jtSelect.jtSelect;
+        Array.from(document.querySelectorAll('.select')).forEach(function(one){
+	      new jtSelect(one, {
+	          searchField: true
+          });
+       });
+
+       new jtSelect(document.querySelector('.select-callback'), {
+           searchField: false,
+           onStateChange: function(){
+               alert('Select changed');
+           }
+       })
+    });
+</script>
+</body>
+</html>

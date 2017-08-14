@@ -1,0 +1,84 @@
+.jtselect {
+  display: inline-block;
+  width: 100%;
+  box-sizing: border-box; }
+  .jtselect .jtselect__block {
+    position: relative;
+    border: 1px solid #BFBFBF;
+    border-radius: 6px;
+    box-sizing: border-box; }
+    .jtselect .jtselect__block .jtselect__value {
+      cursor: pointer;
+      box-sizing: border-box;
+      padding: 0 25px 0 15px;
+      color: #000000;
+      position: relative;
+      font: 14px/33px 'PT Sans', sans-serif;
+      height: 33px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap; }
+      .jtselect .jtselect__block .jtselect__value:after {
+        content: "";
+        border-bottom: 1px solid #595959;
+        border-right: 1px solid #595959;
+        right: 8px;
+        margin-top: -7px;
+        position: absolute;
+        top: 50%;
+        transform: rotate(45deg);
+        width: 10px;
+        transition: all 0.7s;
+        height: 10px; }
+    .jtselect .jtselect__block .jtselect__dropdown {
+      position: absolute;
+      left: -1px;
+      right: -1px;
+      top: 100%;
+      border: 1px solid #BFBFBF;
+      border-top-color: #ffffff;
+      border-radius: 0 0 6px 6px;
+      z-index: 200;
+      display: none;
+      background: #ffffff; }
+      .jtselect .jtselect__block .jtselect__dropdown ul {
+        list-style: none;
+        padding: 0;
+        margin: 0; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li.hidden-li {
+          display: none; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li a {
+          display: block;
+          padding: 0 10px;
+          color: #000000;
+          font: 14px/30px 'PT Sans', sans-serif; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li.active a {
+          color: #ffffff;
+          background: #2e6da4; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li.active:hover a {
+          background: #2e6da4; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li:hover a {
+          color: #ffffff;
+          background: #333333;
+          text-decoration: none; }
+        .jtselect .jtselect__block .jtselect__dropdown ul li:last-child a {
+          border-radius: 0 0 6px 6px; }
+    .jtselect .jtselect__block .jtselect__search {
+      padding: 10px; }
+      .jtselect .jtselect__block .jtselect__search input {
+        width: 100%;
+        height: 24px;
+        border: 1px solid #cccccc;
+        border-radius: 4px;
+        padding: 0 0 0 10px;
+        color: #333333;
+        font: 13px 'PT Sans', sans-serif; }
+  .jtselect.open .jtselect__block {
+    border-radius: 6px 6px 0 0; }
+    .jtselect.open .jtselect__block .jtselect__value:after {
+      transform: rotate(-135deg);
+      margin-top: -2px; }
+  .jtselect.open .jtselect__dropdown {
+    display: block; }
+
+/*# sourceMappingURL=_jtSelect.css.map*/
