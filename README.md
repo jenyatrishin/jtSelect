@@ -1,5 +1,5 @@
 ## jtSelect
-Vanilla JS select styling plugin. Includes two variants ES6 and ES5.
+Vanilla JS select styling plugin. Two variants ES6 and ES5 are included.
 
 ## Installation
 
@@ -20,6 +20,6 @@ new jtSelect(selectElement, options);
 ```
 options
 searchField - true|false,
-onStateChange - function - callback for change event,
+onStateChange - function - callback change event,
 placeholder - string - placeholder for element. 
-Placeholder can set via data html5 attribute data-placeholder=""
+Placeholder can be set via data html5 attribute data-placeholder=""
